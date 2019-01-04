@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:algolia="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+
+            <com.algolia.instantsearch.ui.views.SearchBox
+                android:id="@+id/search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <com.algolia.instantsearch.ui.views.Hits
+            android:id="@+id/hits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            algolia:itemLayout="@layout/hits_item"/>
+
+    </LinearLayout>
